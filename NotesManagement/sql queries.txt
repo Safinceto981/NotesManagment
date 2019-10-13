@@ -1,0 +1,37 @@
+create table staff(
+id identity,
+name nvarchar(30) not null,
+family nvarchar(30) not null,
+age int not null,
+salary numeric(6,2) not null,
+type varchar(15) not null,
+check(age>0 and age<100),
+check(salary>0)
+);
+
+
+-----
+Notes management database
+CREATE TABLE users (
+    id identity,
+    username VARCHAR(50),
+    firstname VARCHAR(50),
+    lastname VARCHAR(50));
+
+CREATE TABLE notes (
+    idnote identity,
+    username VARCHAR(50),
+    notestext VARCHAR(500), 
+    FOREIGN KEY (username) 
+    REFERENCES users(username));
+    
+    
+    
+    
+    
+  CREATE TABLE users (
+    id identity,
+    username VARCHAR(50),
+    firstname VARCHAR(50),
+    lastname VARCHAR(50),
+country varchar (50));
